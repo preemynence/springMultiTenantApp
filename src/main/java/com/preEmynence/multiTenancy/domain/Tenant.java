@@ -1,4 +1,4 @@
-package com.premynence.multiTenancy.domain;
+package com.preEmynence.multiTenancy.domain;
 
 public class Tenant {
 	private String tenantName;

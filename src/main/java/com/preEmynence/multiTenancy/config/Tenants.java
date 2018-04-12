@@ -1,4 +1,4 @@
-package com.premynence.multiTenancy.config;
+package com.preEmynence.multiTenancy.config;
 
 import org.springframework.stereotype.Component;
 
@@ -9,13 +9,13 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class Tenants {
 
-	private Map<Object, Object> dataSourceMap = new ConcurrentHashMap<>();
+	private Map<String, DataSource> dataSourceMap = new ConcurrentHashMap<>();
 
 	public void addDataSource(String session, DataSource dataSource) {
 		this.dataSourceMap.put(session, dataSource);
 	}
 
-	public Map<Object, Object> getDataSourceMap() {
+	public Map<String, DataSource> getDataSourceMap() {
 		return dataSourceMap;
 	}
 }

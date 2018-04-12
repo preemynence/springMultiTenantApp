@@ -1,4 +1,4 @@
-package com.premynence.multiTenancy.config;
+package com.preEmynence.multiTenancy.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
