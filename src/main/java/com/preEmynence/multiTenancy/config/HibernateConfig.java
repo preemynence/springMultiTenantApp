@@ -12,11 +12,12 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 @Configuration
 public class HibernateConfig {
 
+	@Autowired
+	DataSourceRouter dataSourceRouter;
+
 	@Value("${spring.jpa.database-platform}")
 	private String hibernateDialect;
 
-	@Autowired
-	private MultiTenantDataSources multiTenantDataSources;
 	/**
 	 * Convenience for {@link #sessionFactoryBean().getObject()}.
 	 */
@@ -33,20 +34,16 @@ public class HibernateConfig {
 	protected LocalSessionFactoryBean createSessionFactoryBean() {
 
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-		factoryBean.setDataSource(multiTenantDataSources.myMultiTenantDataSource());
+		factoryBean.setDataSource(dataSourceRouter);
 
 		factoryBean.getHibernateProperties().setProperty(AvailableSettings.DIALECT,
 				hibernateDialect);
 
-		// configure for multitenancy
-		if (!(multiTenantDataSources.myMultiTenantDataSource() instanceof DataSourceRouter)) {
-			throw new IllegalStateException("a DataSourceRouter is required");
-		}
 
 		factoryBean.getHibernateProperties().setProperty(AvailableSettings.MULTI_TENANT,
 				MultiTenancyStrategy.DATABASE.toString());
 		factoryBean.setMultiTenantConnectionProvider(
-				new MultiTenantConnectionProviderImpl((DataSourceRouter) multiTenantDataSources.myMultiTenantDataSource()));
+				new MultiTenantConnectionProviderImpl(dataSourceRouter));
 		factoryBean.setCurrentTenantIdentifierResolver(
 				new CurrentTenantIdentifierResolverImpl(TenantContext.getCurrentTenant()));
 
