@@ -27,7 +27,7 @@ public class Tenants {
 
 	public DataSource defaultDataSource() {
 		DataSourceBuilder dataSourceBuilder = new DataSourceBuilder(this.getClass().getClassLoader())
-				.driverClassName(properties.getDriverClassName()).url(properties.getUrl())
+				.driverClassName(properties.getDriverClassName()).url(properties.getUrl().replace("#tenant#","dummy"))
 				.username(properties.getUsername()).password(properties.getPassword());
 
 		if (properties.getType() != null) {

@@ -32,9 +32,9 @@ public class DataSourceRouter extends AbstractDataSource {
 
 		//TODO: here find the new datasource from remote by lookup key.
 		dataSourceBuilder.driverClassName(properties.getDriverClassName())
-				.url(properties.getUrl() + lookupKey)
-				.username(properties.getUsername())
-				.password(properties.getPassword());
+				.url(properties.getUrl().replace("#tenant#",lookupKey))
+				.username(lookupKey + "_username")
+				.password(lookupKey + "_password");
 		if (properties.getType() != null) {
 			dataSourceBuilder.type(properties.getType());
 		}
