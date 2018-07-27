@@ -1,7 +1,7 @@
-package com.preEmynence.multiTenancy.config;
+package com.preemynence.multitenancy.config;
 
-import com.preEmynence.multiTenancy.util.ArrayUtil;
-import com.preEmynence.multiTenancy.util.StringUtil;
+import com.preemynence.multitenancy.util.ArrayUtil;
+import com.preemynence.multitenancy.util.StringUtil;
 import org.hibernate.EmptyInterceptor;
 
 import java.io.Serializable;

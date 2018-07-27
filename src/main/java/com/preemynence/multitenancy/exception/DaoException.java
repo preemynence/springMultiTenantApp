@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.exception;
+package com.preemynence.multitenancy.exception;
 
 public class DaoException extends RuntimeException {
 

@@ -1,6 +1,6 @@
-package com.preEmynence.multiTenancy.controllers;
+package com.preemynence.multitenancy.controllers;
 
-import com.preEmynence.multiTenancy.config.TenantContext;
+import com.preemynence.multitenancy.config.TenantContext;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;

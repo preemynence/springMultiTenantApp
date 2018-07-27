@@ -1,6 +1,6 @@
-package com.preEmynence.multiTenancy.config;
+package com.preemynence.multitenancy.config;
 
-import com.preEmynence.multiTenancy.controllers.MultiTenancyInterceptor;
+import com.preemynence.multitenancy.controllers.MultiTenancyInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;

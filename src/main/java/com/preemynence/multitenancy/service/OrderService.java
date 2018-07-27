@@ -1,6 +1,6 @@
-package com.preEmynence.multiTenancy.service;
+package com.preemynence.multitenancy.service;
 
-import com.preEmynence.multiTenancy.domain.Order;
+import com.preemynence.multitenancy.domain.Order;
 
 import java.util.List;
 

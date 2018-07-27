@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.config;
+package com.preemynence.multitenancy.config;
 
 import org.hibernate.MultiTenancyStrategy;
 import org.hibernate.SessionFactory;
@@ -13,7 +13,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 public class HibernateConfig {
 
 	@Autowired
-	DataSourceRouter dataSourceRouter;
+	private DataSourceRouter dataSourceRouter;
 
 	@Value("${spring.jpa.database-platform}")
 	private String hibernateDialect;

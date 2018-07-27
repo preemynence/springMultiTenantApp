@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.domain;
+package com.preemynence.multitenancy.domain;
 
 import javax.persistence.*;
 import java.sql.Date;

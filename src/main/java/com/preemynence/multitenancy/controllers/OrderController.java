@@ -1,7 +1,7 @@
-package com.preEmynence.multiTenancy.controllers;
+package com.preemynence.multitenancy.controllers;
 
-import com.preEmynence.multiTenancy.domain.Order;
-import com.preEmynence.multiTenancy.service.OrderService;
+import com.preemynence.multitenancy.domain.Order;
+import com.preemynence.multitenancy.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

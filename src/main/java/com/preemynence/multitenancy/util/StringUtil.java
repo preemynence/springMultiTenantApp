@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.util;
+package com.preemynence.multitenancy.util;
 
 import java.util.regex.Pattern;
 

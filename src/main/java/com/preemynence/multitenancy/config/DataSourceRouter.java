@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.config;
+package com.preemynence.multitenancy.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
@@ -18,7 +18,7 @@ public class DataSourceRouter extends AbstractDataSource {
 	private DataSourceProperties properties;
 
 	@Autowired
-	Tenants tenants;
+	private Tenants tenants;
 
 	// Should you find new dataSources based on the new tenantId received as part of request?
 	private boolean tryFindingNewDataSource = true;

@@ -1,8 +1,8 @@
-package com.preEmynence.multiTenancy.service.impl;
+package com.preemynence.multitenancy.service.impl;
 
-import com.preEmynence.multiTenancy.dao.OrderDao;
-import com.preEmynence.multiTenancy.domain.Order;
-import com.preEmynence.multiTenancy.service.OrderService;
+import com.preemynence.multitenancy.dao.OrderDao;
+import com.preemynence.multitenancy.domain.Order;
+import com.preemynence.multitenancy.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

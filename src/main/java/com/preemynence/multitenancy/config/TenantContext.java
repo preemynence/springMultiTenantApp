@@ -1,4 +1,4 @@
-package com.preEmynence.multiTenancy.config;
+package com.preemynence.multitenancy.config;
 
 public class TenantContext {
    

@@ -1,7 +1,7 @@
-package com.preEmynence.multiTenancy.dao.impl;
+package com.preemynence.multitenancy.dao.impl;
 
-import com.preEmynence.multiTenancy.dao.OrderDao;
-import com.preEmynence.multiTenancy.domain.Order;
+import com.preemynence.multitenancy.dao.OrderDao;
+import com.preemynence.multitenancy.domain.Order;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,7 @@ import java.util.List;
 public class OrderDaoImpl implements OrderDao {
 
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	@Override
 	public List<Order> findAll() {
