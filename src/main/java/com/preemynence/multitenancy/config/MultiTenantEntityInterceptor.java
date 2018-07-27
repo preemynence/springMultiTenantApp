@@ -1,5 +1,6 @@
 package com.preemynence.multitenancy.config;
 
+import com.preemynence.multitenancy.exception.DaoException;
 import com.preemynence.multitenancy.util.ArrayUtil;
 import com.preemynence.multitenancy.util.StringUtil;
 import org.hibernate.EmptyInterceptor;
@@ -48,9 +49,9 @@ public class MultiTenantEntityInterceptor extends EmptyInterceptor {
 		// on update, block cross tenant attempt
 		else if (!tenantId.equals(activeTenantId)) {
 			try {
-				throw new Exception(
+				throw new DaoException(
 						"cross tenant update, tenantId=" + tenantId + ", activeTenantId=" + activeTenantId);
-			} catch (Exception e) {
+			} catch (DaoException e) {
 				e.printStackTrace();
 			}
 		}

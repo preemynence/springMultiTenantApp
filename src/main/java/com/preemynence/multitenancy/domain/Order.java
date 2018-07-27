@@ -7,13 +7,6 @@ import java.sql.Date;
 @Table(name = "orders")
 public class Order {
 
-    public Order() {
-    }
-
-    public Order(Date date) {
-        this.date = date;
-    }
-
     @Id
     @Column(nullable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +15,14 @@ public class Order {
     @Column(nullable = false, name = "date")
     private Date date;
 
-	public int getId() {
+	public Order() {
+    }
+
+    public Order(Date date) {
+        this.date = date;
+    }
+
+    public int getId() {
 		return id;
 	}
 
