@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.preEmynence")
+@ComponentScan("com.preemynence")
 public class MultiTenantDemoApplication {
 
 	public static void main(String[] args) {
