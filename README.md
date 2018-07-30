@@ -32,3 +32,6 @@ Create user like following
     FLUSH PRIVILEGES;
     
     Run the script to create all the tables in newly created database.
+    
+    Badges
+    [![Codacy Badge](https://api.codacy.com/project/badge/Grade/59253e3714414417a054c0727552ae59)](https://www.codacy.com/project/PreEmynence/springMultiTenantApp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=preemynence/springMultiTenantApp&amp;utm_campaign=Badge_Grade_Dashboard)
